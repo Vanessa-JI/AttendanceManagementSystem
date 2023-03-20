@@ -1,7 +1,11 @@
 package com.attendance;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class MajorApplication {
     public static void main(String[] args) {
-        System.out.println("Hello Sukhman!");
+        SpringApplication.run(MajorApplication.class, args);
     }
 }
