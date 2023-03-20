@@ -1,6 +1,6 @@
-package org.example;
+package com.attendance;
 
-public class Main {
+public class MajorApplication {
     public static void main(String[] args) {
         System.out.println("Hello Sukhman!");
     }
