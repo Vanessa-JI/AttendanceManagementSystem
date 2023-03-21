@@ -1,5 +1,9 @@
 package com.attendance.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.stereotype.Repository;
+
 public class Teacher {
     private String teacherUsername; // primary key in teacher table, FK in class table
     private String password;

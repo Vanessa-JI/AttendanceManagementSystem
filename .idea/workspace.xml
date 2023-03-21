@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Basic Structure V1 20/03/23 19:05 PM">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/StudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/StudentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/StudentRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/AttendanceManagementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/studentLogin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/studentSignup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teachers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/MajorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/MajorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacherLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -100,12 +81,20 @@
       <option name="project" value="LOCAL" />
       <updated>1679339142637</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm">
+      <created>1679350839768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679350839768</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sukhman testing" />
     <MESSAGE value="Basic Structure V1 20/03/23 19:05 PM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Structure V1 20/03/23 19:05 PM" />
+    <MESSAGE value="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm" />
   </component>
 </project>
