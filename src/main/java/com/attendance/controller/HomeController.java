@@ -1,5 +1,6 @@
 package com.attendance.controller;
 
+import com.attendance.entity.ClassEntity;
 import com.attendance.entity.Teacher;
 import com.attendance.service.AttendanceManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,16 +32,6 @@ public class HomeController {
         return "home";
     }
 
-//    @GetMapping("/teachers")
-//    public String displayteachers(Model model) {
-//        List<Teacher> teachers = service.getAllTeachers();
-//        model.addAttribute("teachers", teachers);
-//        for (Teacher t : teachers) {
-//            System.out.println(t.getTeacherUsername());
-//        }
-//        return "teachers";
-//    }
-
     @GetMapping("/teachers")
     public ModelAndView displayteachers(Model model) {
         List<Teacher> teachers = service.getAllTeachers();
@@ -48,6 +39,15 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("teachers", teachers);
         modelAndView.setViewName("teachers");
+        return modelAndView;
+    }
+
+    @GetMapping("/coursesforteacher")
+    public ModelAndView displayCourseByTeacher(Model model) {
+        List<ClassEntity> classes = service.getAllClassesForTeacher();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("teacherView", classes);
+        modelAndView.setViewName("teacherView");
         return modelAndView;
     }
 }

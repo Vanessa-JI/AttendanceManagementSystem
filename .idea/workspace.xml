@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teachers.html" afterDir="false" />
+    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Embedded database information in HTML V4 21/3, 00:09am">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityRowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/TeacherRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/AttendanceManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/AttendanceManagementService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,13 +87,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679350839768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Embedded database information in HTML V4 21/3, 00:09am">
+      <created>1679357385877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679357385877</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sukhman testing" />
     <MESSAGE value="Basic Structure V1 20/03/23 19:05 PM" />
     <MESSAGE value="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database functionality works -- can connect via JDBC V3 20/3, 22:30pm" />
+    <MESSAGE value="Embedded database information in HTML V4 21/3, 00:09am" />
+    <option name="LAST_COMMIT_MESSAGE" value="Embedded database information in HTML V4 21/3, 00:09am" />
   </component>
 </project>

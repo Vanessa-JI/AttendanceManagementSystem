@@ -5,7 +5,7 @@ public class ClassEntity {
     private String className; // PK
     private String teacherUsername; // FK for teacher username, link teacher table to class table
     private String course;
-    private String date;
+    private String classDate;
 
     public String getClassName() {
         return className;
@@ -31,11 +31,11 @@ public class ClassEntity {
         this.course = course;
     }
 
-    public String getDate() {
-        return date;
+    public String getClassDate() {
+        return classDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setClassDate(String classDate) {
+        this.classDate = classDate;
     }
 }
