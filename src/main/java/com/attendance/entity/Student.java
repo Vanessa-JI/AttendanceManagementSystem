@@ -3,8 +3,6 @@ package com.attendance.entity;
 public class Student {
     private String firstName;
     private String lastName;
-    private boolean isPresent;
-    private String note;
     private String studentUsername; // PK & FK
     private String password;
 
@@ -27,22 +25,6 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public boolean isPresent() {
-        return isPresent;
-    }
-
-    public void setPresent(boolean present) {
-        isPresent = present;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
-    }
-
     public String getStudentUsername() {
         return studentUsername;
     }
@@ -57,5 +39,15 @@ public class Student {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", studentUsername='" + studentUsername + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

@@ -5,4 +5,8 @@ public class ClassStudent {
     private int relationshipId;
     private String className;
     private String studentUsername;
+    private boolean isPresent;
+    private String note;
+
+
 }

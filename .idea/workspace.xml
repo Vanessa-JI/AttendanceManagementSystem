@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Table design and html page links figured out V5 21/3, 18:37pm">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/studentSignupSuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/AttendanceManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/AttendanceManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentSignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentSignup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentSignupSuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentSignupSuccess.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
