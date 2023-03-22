@@ -35,4 +35,5 @@ public class AttendanceManagementService {
     public void save(Student student) {
         studentDao.save(student);
     }
+
 }

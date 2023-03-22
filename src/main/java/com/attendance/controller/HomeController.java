@@ -4,8 +4,8 @@ import com.attendance.entity.ClassEntity;
 import com.attendance.entity.Student;
 import com.attendance.entity.Teacher;
 import com.attendance.service.AttendanceManagementService;
+import com.attendance.service.StudentServiceLayer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -84,6 +84,23 @@ public class HomeController {
         return modelAndView;
     }
 
+    @GetMapping("/studentHome")
+    public ModelAndView backToStudentHome(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("studentHome");
+        return modelAndView;
+    }
+    @PostMapping("/login")
+    public String processLogin(
+            @RequestParam("studentUsername") String username,
+            @RequestParam("password") String password,
+            Model model) {
+
+        // Authenticate the user and redirect to the appropriate page
+        // or display an error message using the Model object
+
+        return "redirect:/dashboard";
+    }
 //    @PostMapping("/signup")
 //    public String processSignupForm(@ModelAttribute("student") Student student, BindingResult result) {
 //        if (result.hasErrors()) {
