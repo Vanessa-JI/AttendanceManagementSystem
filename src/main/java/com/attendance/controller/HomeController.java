@@ -4,8 +4,8 @@ import com.attendance.entity.ClassEntity;
 import com.attendance.entity.Student;
 import com.attendance.entity.Teacher;
 import com.attendance.service.AttendanceManagementService;
-import com.attendance.service.StudentServiceLayer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -90,17 +90,34 @@ public class HomeController {
         modelAndView.setViewName("studentHome");
         return modelAndView;
     }
-    @PostMapping("/login")
-    public String processLogin(
-            @RequestParam("studentUsername") String username,
-            @RequestParam("password") String password,
-            Model model) {
 
-        // Authenticate the user and redirect to the appropriate page
-        // or display an error message using the Model object
-
-        return "redirect:/dashboard";
+    @GetMapping("/studentLogin")
+    public ModelAndView showLoginForm(Model model) {
+        System.out.println("INSIDE THE GET!!!!");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("student", new Student());
+        modelAndView.setViewName("studentLogin");
+//        model.addAttribute("student", new Student());
+        return modelAndView;
     }
+
+    @PostMapping("/studentLogin")
+    public ModelAndView processLoginForm(@ModelAttribute("student") Student student, BindingResult result) {
+        System.out.println("INSIDE THE POST!!!!");
+        ModelAndView modelAndView = new ModelAndView();
+
+        if (result.hasErrors()) {
+            modelAndView.setViewName("studentLogin");
+            return modelAndView;
+        }
+
+        // Save the student data to the database using JdbcTemplate
+        service.save(student);
+
+        modelAndView.setViewName("studentHome");
+        return modelAndView;
+    }
+
 //    @PostMapping("/signup")
 //    public String processSignupForm(@ModelAttribute("student") Student student, BindingResult result) {
 //        if (result.hasErrors()) {

@@ -19,7 +19,7 @@
       <h3>Student Login</h3>
     </div>
     <div class="card-body">
-      <form th:action="@{/attendance/studentHome}" method="post" th:object="${student}">
+      <form th:action="@{/attendance/studentLogin}" method="post" th:object="${student}">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div class="form-group">
           <label for="studentUsername">Username</label>
