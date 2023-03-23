@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/attendance")
@@ -140,14 +141,51 @@ public class HomeController {
         return modelAndView;
     }
 
-    @GetMapping("/classStudent")
-    public ModelAndView displayAttendanceSheet(@RequestParam("className") String className, Model model) {
-        List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
+//    @GetMapping("/classStudent")
+//    public ModelAndView displayAttendanceSheet(@RequestParam("className") String className, Model model) {
+//        System.out.println("1!");
+//        List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
+//        System.out.println("2!");
+//        System.out.println(classStudent.toString());
+//        ModelAndView modelAndView = new ModelAndView();
+//        System.out.println("3!");
+//        modelAndView.addObject("classStudent", classStudent);
+//        System.out.println("4!");
+//        modelAndView.setViewName("classStudent");
+//        System.out.println("5!");
+//        return modelAndView;
+//    }
 
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("classStudent", classStudent);
-        modelAndView.setViewName("classStudent");
-        return modelAndView;
+@GetMapping("/classStudent")
+public ModelAndView displayAttendanceSheet(@RequestParam("className") String className) {
+    List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
+    ModelAndView mav = new ModelAndView("classStudent");
+    Map<String, Object> model = mav.getModel();
+    for (ClassStudent student : classStudent) {
+        model.put(student.getStudentUsername(), student);
+    }
+    model.put("className", className);
+    model.put("newClassStudent", new ClassStudent());
+    return mav;
+}
+
+    @PostMapping("/classStudent")
+    public ModelAndView updateAttendance(@RequestParam("attendance") List<ClassStudent> attendanceList) {
+        String className = attendanceList.get(0).getClassName();
+        for ( int i=0; i<attendanceList.size(); i++ ) {
+            ClassStudent classStudent = attendanceList.get(i); //assuming id starts from 1
+            classService.updateAttendance(classStudent);
+            System.out.println("Updated!");
+        }
+
+
+        System.out.println("in the main post map");
+        List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
+        System.out.println(classStudent.toString());
+        ModelAndView mav = new ModelAndView("classStudent");
+        mav.addObject("classStudent", classStudent);
+        mav.setViewName("classStudent");
+        return mav;
     }
 
 //    @GetMapping("/class-details")

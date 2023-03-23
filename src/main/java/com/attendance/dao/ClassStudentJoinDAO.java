@@ -21,7 +21,7 @@ public class ClassStudentJoinDAO {
                 "FROM classEntity ce\n" +
                 "JOIN classStudent cs ON ce.className = cs.className\n" +
                 "WHERE cs.studentUsername = 't@email.com'; ";
-        List <ClassStudentJoin> classEntities = jdbcTemplate.query(SELECT_CLASS_BY_STUDENT, new ClassEntityRowMapper());
+        List <ClassStudentJoin> classEntities = jdbcTemplate.query(SELECT_CLASS_BY_STUDENT, new ClassStudentJoinRowMapper());
         return classEntities;
     }
 }

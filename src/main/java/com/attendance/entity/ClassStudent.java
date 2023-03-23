@@ -47,4 +47,5 @@ public class ClassStudent {
     public void setNote(String note) {
         this.note = note;
     }
+
 }

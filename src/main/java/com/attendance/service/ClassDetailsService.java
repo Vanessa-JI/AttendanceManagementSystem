@@ -36,4 +36,8 @@ public class ClassDetailsService {
     public List<ClassStudent> getAttendanceByClass(String className) {
         return classStudentDao.getAttendanceByClass(className);
     }
+
+    public void updateAttendance(ClassStudent classStudent) {
+        classStudentDao.updateAttendance(classStudent);
+    }
 }
