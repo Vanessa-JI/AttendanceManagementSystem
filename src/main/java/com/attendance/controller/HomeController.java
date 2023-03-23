@@ -1,9 +1,6 @@
 package com.attendance.controller;
 
-import com.attendance.entity.ClassEntity;
-import com.attendance.entity.ClassStudentJoin;
-import com.attendance.entity.Student;
-import com.attendance.entity.Teacher;
+import com.attendance.entity.*;
 import com.attendance.service.AttendanceManagementService;
 import com.attendance.service.ClassDetailsService;
 import com.attendance.service.StudentDetailsService;
@@ -100,7 +97,6 @@ public class HomeController {
 
     @GetMapping("/studentLogin")
     public ModelAndView showLoginForm() {
-        System.out.println("INSIDE THE GET!!!!");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("student", new Student());
         modelAndView.setViewName("studentLogin.html");
@@ -110,14 +106,15 @@ public class HomeController {
 
     @PostMapping("/studentLogin")
     public ModelAndView processLoginForm(@ModelAttribute("student") Student student, BindingResult result) {
-        System.out.println("INSIDE THE POST!!!!");
         ModelAndView modelAndView = new ModelAndView();
 
         if (result.hasErrors()) {
             modelAndView.setViewName("studentLogin.html");
             return modelAndView;
         }
-        studentService.loadUserByUsername(student.getStudentUsername());
+//        System.out.println("LOOK HERE");
+//        System.out.println(student.toString());
+        studentService.loadUserByUsername(student);
 
         modelAndView.setViewName("studentHome.html");
         return modelAndView;
@@ -142,6 +139,18 @@ public class HomeController {
         modelAndView.setViewName("teacherHome");
         return modelAndView;
     }
+
+    @GetMapping("/classStudent")
+    public ModelAndView displayAttendanceSheet(Model model) {
+        List<ClassStudent> classStudent = classService.getAttendanceByClass();
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("classStudent", classStudent);
+        modelAndView.setViewName("classStudent");
+        return modelAndView;
+    }
+
+
 
 //    @PostMapping("/signup")
 //    public String processSignupForm(@ModelAttribute("student") Student student, BindingResult result) {

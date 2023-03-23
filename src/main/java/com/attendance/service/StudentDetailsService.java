@@ -26,21 +26,24 @@ public class StudentDetailsService implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("INSIDE THE SERVICE LAYER");
-        String sql = "SELECT studentUsername, firstName, lastName, password FROM student WHERE studentUsername = ?";
-        Student student = jdbcTemplate.queryForObject(sql, new Object[]{username},
-                (rs, rowNum) -> new Student(
-                        rs.getString("studentUsername"),
-                        rs.getString("firstName"),
-                        rs.getString("lastName"),
-                        rs.getString("password"),
-                        null)); // authorities will be set later
-        if (student == null) {
-            throw new UsernameNotFoundException("Invalid username or password");
-        }
+    public UserDetails loadUserByUsername(Student student) throws UsernameNotFoundException {
+//        System.out.println("INSIDE THE SERVICE LAYER");
+//        System.out.println("current username is " + username);
+//        username = "s@e.com";
+//        String sql = "SELECT studentUsername, firstName, lastName, password FROM student WHERE studentUsername = ?";
+//        Student student = jdbcTemplate.queryForObject(sql, new Object[]{username},
+//                (rs, rowNum) -> new Student(
+//                        rs.getString("studentUsername"),
+//                        rs.getString("firstName"),
+//                        rs.getString("lastName"),
+//                        rs.getString("password"),
+//                        null)); // authorities will be set later
+//        if (student == null) {
+//            throw new UsernameNotFoundException("Invalid username or password");
+//        }
+        Student test = authenticate(student.getStudentUsername(), student.getPassword());
         String authoritySql = "SELECT authority FROM authorities WHERE studentUsername = ?";
-        List<GrantedAuthority> authorities = jdbcTemplate.query(authoritySql, new Object[]{username},
+        List<GrantedAuthority> authorities = jdbcTemplate.query(authoritySql, new Object[]{student.getStudentUsername()},
                 (rs, rowNum) -> new SimpleGrantedAuthority(rs.getString("authority")));
         student.setAuthorities(authorities);
         return student;

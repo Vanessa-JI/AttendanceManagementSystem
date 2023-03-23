@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityWebApplicationInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentJoinDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentJoinRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudentJoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacherHome.html" afterDir="false" />
+    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Student and teacher home pages displaying database info V10 23/3, 00:32am">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentRowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/classStudent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentHome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/viewSheet.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679516418313</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Student and teacher home pages displaying database info V10 23/3, 00:32am">
+      <created>1679531537670</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679531537670</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,14 +153,15 @@
     <MESSAGE value="Table design and html page links figured out V5 21/3, 18:37pm" />
     <MESSAGE value="Gotten student sign up form working with the database V6 22/3, 00:09am" />
     <MESSAGE value="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm" />
+    <MESSAGE value="Student and teacher home pages displaying database info V10 23/3, 00:32am" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student and teacher home pages displaying database info V10 23/3, 00:32am" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java</url>
-          <line>20</line>
+          <line>17</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
