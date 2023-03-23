@@ -27,7 +27,7 @@
       <td th:text="${t.className}"></td>
       <td th:text="${t.course}"></td>
       <td th:text="${t.classDate}"></td>
-      <td>View</td>
+      <td><a th:href="@{/attendance/classStudent(className=${t.className})}">View Students</a></td>
     </tr>
     </tbody>
   </table>

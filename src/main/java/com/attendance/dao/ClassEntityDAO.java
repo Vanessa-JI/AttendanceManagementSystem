@@ -30,4 +30,6 @@ public class ClassEntityDAO {
         List <ClassEntity> classEntities = jdbcTemplate.query(SELECT_CLASS_BY_TEACHER, new ClassEntityRowMapper(), teacher);
         return classEntities;
     }
+
+
 }

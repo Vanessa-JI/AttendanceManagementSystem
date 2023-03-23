@@ -109,15 +109,15 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView();
 
         if (result.hasErrors()) {
-            modelAndView.setViewName("studentLogin.html");
-            return modelAndView;
+//            modelAndView.setViewName("studentLogin");
+            return null;
+//            return modelAndView;
         }
-//        System.out.println("LOOK HERE");
 //        System.out.println(student.toString());
-        studentService.loadUserByUsername(student);
-
-        modelAndView.setViewName("studentHome.html");
-        return modelAndView;
+        studentService.loadUserByUsername(student.getUsername());
+//        modelAndView.setViewName("studentHome");
+//        return modelAndView;
+        return null;
     }
 
     @GetMapping("/studentHome")
@@ -141,8 +141,8 @@ public class HomeController {
     }
 
     @GetMapping("/classStudent")
-    public ModelAndView displayAttendanceSheet(Model model) {
-        List<ClassStudent> classStudent = classService.getAttendanceByClass();
+    public ModelAndView displayAttendanceSheet(@RequestParam("className") String className, Model model) {
+        List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("classStudent", classStudent);
@@ -150,7 +150,12 @@ public class HomeController {
         return modelAndView;
     }
 
-
+//    @GetMapping("/class-details")
+//    public String getClassDetails(@RequestParam("classId") int classId, Model model) {
+////        List<ClassStudent> students = service.getClassAttendance();
+//        model.addAttribute("students", students);
+//        return "class-details";
+//    }
 
 //    @PostMapping("/signup")
 //    public String processSignupForm(@ModelAttribute("student") Student student, BindingResult result) {

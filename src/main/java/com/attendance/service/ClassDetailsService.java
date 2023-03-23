@@ -33,7 +33,7 @@ public class ClassDetailsService {
         return dao.getAllClassesForTeacher();
     }
 
-    public List<ClassStudent> getAttendanceByClass() {
-        return classStudentDao.getAttendanceByClass();
+    public List<ClassStudent> getAttendanceByClass(String className) {
+        return classStudentDao.getAttendanceByClass(className);
     }
 }

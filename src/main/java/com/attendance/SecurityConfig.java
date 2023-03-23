@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
@@ -33,6 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
         http.authorizeRequests()
 //                .antMatchers("/admin/**").hasRole("ADMIN")
+//                .anyRequest()
+//                .authenticated()
                 .antMatchers("/attendance/studentLogin", "/attendance/studentHome").hasRole("STUDENT")
                 .antMatchers("/", "/attendance/signup", "/attendance/studentLogin", "/css/", "/js/", "/fonts/**", "/attendance/teacherHome", "/attendance/classStudent" ).permitAll()
                 .anyRequest().hasRole("STUDENT")
@@ -41,7 +44,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/attendance/studentLogin")
                 .failureUrl("/login?login_error=1")
-                .defaultSuccessUrl("/attendance/studentHome")
+                .defaultSuccessUrl("http://localhost:8084/attendance/studentHome")
+//                .loginProcessingUrl("/attendance/studentHome")
                 .permitAll()
                 .and()
                 .logout()
@@ -50,6 +54,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .permitAll();
+
+
+//        http
+//                .authorizeRequests().anyRequest().authenticated().antMatchers("/login").permitAll().and().formLogin() .loginPage("/login").defaultSuccessUrl("/", true).permitAll();
 //        http
 //                .authorizeRequests()
 ////                .antMatchers("/admin").hasRole("ADMIN")
@@ -75,6 +83,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                    }
 //                })
 //                .permitAll();
+//        return http.build();
     }
     }
 

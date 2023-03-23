@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Student and teacher home pages displaying database info V10 23/3, 00:32am">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/classStudent.html" afterDir="false" />
+    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Student login page error fixed V11 23/3, 01:48am">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/ClassEntity.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityWebApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityWebApplicationInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/viewSheet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/classStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/classStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacherHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacherHome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,7 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="UML Class" />
       </list>
     </option>
   </component>
@@ -52,13 +54,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "DefaultPlantUmlFileTemplate": "UML Class",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/vanessaigodifo/Downloads/AttendanceManagementSystem/src/main/java/com/attendance/service",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -131,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679531537670</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Student login page error fixed V11 23/3, 01:48am">
+      <created>1679536140519</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679536140520</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,7 +165,8 @@
     <MESSAGE value="Gotten student sign up form working with the database V6 22/3, 00:09am" />
     <MESSAGE value="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm" />
     <MESSAGE value="Student and teacher home pages displaying database info V10 23/3, 00:32am" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student and teacher home pages displaying database info V10 23/3, 00:32am" />
+    <MESSAGE value="Student login page error fixed V11 23/3, 01:48am" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student login page error fixed V11 23/3, 01:48am" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -166,12 +178,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java</url>
-          <line>32</line>
+          <line>33</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
