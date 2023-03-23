@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class StudentDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println("INSIDE THE SERVICE LAYER");
         String sql = "SELECT studentUsername, firstName, lastName, password FROM student WHERE studentUsername = ?";
         Student student = jdbcTemplate.queryForObject(sql, new Object[]{username},
                 (rs, rowNum) -> new Student(

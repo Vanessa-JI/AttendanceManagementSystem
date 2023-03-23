@@ -1,6 +1,7 @@
 package com.attendance.dao;
 
 import com.attendance.entity.ClassEntity;
+import com.attendance.entity.ClassStudentJoin;
 import com.attendance.entity.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,6 +17,7 @@ public class ClassEntityDAO {
     public ClassEntityDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
 
     /**
      * This method returns a list of games to the controller, where all the games are obtained from the database.

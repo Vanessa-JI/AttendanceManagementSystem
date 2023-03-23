@@ -33,11 +33,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
         http.authorizeRequests()
 //                .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/attendance/student**").hasRole("STUDENT")
-                .antMatchers("/", "/attendance/signup", "/attendance/studentLogin").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/attendance/studentLogin", "/attendance/studentHome").hasRole("STUDENT")
+                .antMatchers("/", "/attendance/signup", "/attendance/studentLogin", "/css/", "/js/", "/fonts/**", "/attendance/studentHome", "/attendance/teacherHome" ).permitAll()
+                .anyRequest().hasRole("STUDENT")
+//                .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                .loginPage("/attendance/studentLogin")
+                .failureUrl("/login?login_error=1").permitAll()
                 .and()
                 .logout()
                 .logoutUrl("/attendance/home")
@@ -45,6 +48,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .permitAll();
+//        http
+//                .authorizeRequests()
+////                .antMatchers("/admin").hasRole("ADMIN")
+////                .antMatchers("/", "/home").permitAll()
+//                .antMatchers("/css/", "/js/", "/fonts/**").permitAll()
+//                .anyRequest().hasRole("USER")
+//                .and()
+//                .formLogin()
+//                .loginPage("/login")
+//                .failureUrl("/login?login_error=1")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .logoutSuccessUrl("/")
+//                .permitAll();
 //        http
 //                .formLogin()
 //                .failureHandler((request, response, exception) -> {

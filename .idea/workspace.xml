@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Gotten student sign up form working with the database V6 22/3, 00:09am">
+    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityWebApplicationInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentJoinDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentJoinRowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudentJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacherHome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassEntityRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentHome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentLogin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,18 +52,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/user/Desktop/Sukhman/Wiley Edge/AttendanceManagementSystem&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/vanessaigodifo/Downloads/AttendanceManagementSystem/src/main/java/com/attendance/service",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/attendance/service" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679443842765</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm">
+      <created>1679516418313</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679516418313</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +148,28 @@
     <MESSAGE value="Embedded database information in HTML V4 21/3, 00:09am" />
     <MESSAGE value="Table design and html page links figured out V5 21/3, 18:37pm" />
     <MESSAGE value="Gotten student sign up form working with the database V6 22/3, 00:09am" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gotten student sign up form working with the database V6 22/3, 00:09am" />
+    <MESSAGE value="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the StudentDetailsService back to file directory V9 22/3, 20:20pm" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/attendance/service/StudentDetailsService.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

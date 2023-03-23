@@ -1,9 +1,12 @@
 package com.attendance.controller;
 
 import com.attendance.entity.ClassEntity;
+import com.attendance.entity.ClassStudentJoin;
 import com.attendance.entity.Student;
 import com.attendance.entity.Teacher;
 import com.attendance.service.AttendanceManagementService;
+import com.attendance.service.ClassDetailsService;
+import com.attendance.service.StudentDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.ui.Model;
@@ -18,10 +21,14 @@ import java.util.List;
 public class HomeController {
 
     private AttendanceManagementService service;
+    private StudentDetailsService studentService;
+    private ClassDetailsService classService;
 
     @Autowired
-    public HomeController(AttendanceManagementService service) {
+    public HomeController(AttendanceManagementService service, StudentDetailsService studentService, ClassDetailsService classService) {
         this.service = service;
+        this.studentService = studentService;
+        this.classService = classService;
     }
 
     /* @GetMapping is a composed annotation that acts as a shortcut
@@ -84,19 +91,19 @@ public class HomeController {
         return modelAndView;
     }
 
-    @GetMapping("/studentHome")
-    public ModelAndView backToStudentHome(Model model) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("studentHome");
-        return modelAndView;
-    }
+//    @GetMapping("/studentHome")
+//    public ModelAndView backToStudentHome(Model model) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("studentHome");
+//        return modelAndView;
+//    }
 
     @GetMapping("/studentLogin")
-    public ModelAndView showLoginForm(Model model) {
+    public ModelAndView showLoginForm() {
         System.out.println("INSIDE THE GET!!!!");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("student", new Student());
-        modelAndView.setViewName("studentLogin");
+        modelAndView.setViewName("studentLogin.html");
 //        model.addAttribute("student", new Student());
         return modelAndView;
     }
@@ -107,14 +114,32 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView();
 
         if (result.hasErrors()) {
-            modelAndView.setViewName("studentLogin");
+            modelAndView.setViewName("studentLogin.html");
             return modelAndView;
         }
+        studentService.loadUserByUsername(student.getStudentUsername());
 
-        // Save the student data to the database using JdbcTemplate
-        service.save(student);
+        modelAndView.setViewName("studentHome.html");
+        return modelAndView;
+    }
 
+    @GetMapping("/studentHome")
+    public ModelAndView displayStudentClasses(Model model) {
+        List<ClassStudentJoin> studentHome = classService.getAllClasses();
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("studentHome", studentHome);
         modelAndView.setViewName("studentHome");
+        return modelAndView;
+    }
+
+    @GetMapping("/teacherHome")
+    public ModelAndView displayTeacherClasses(Model model) {
+        List<ClassEntity> teacherHome = classService.getAllClassesByTeacher();
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("teacherHome", teacherHome);
+        modelAndView.setViewName("teacherHome");
         return modelAndView;
     }
 
