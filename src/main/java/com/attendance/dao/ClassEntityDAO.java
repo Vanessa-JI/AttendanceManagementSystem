@@ -20,9 +20,9 @@ public class ClassEntityDAO {
 
 
     /**
-     * This method returns a list of games to the controller, where all the games are obtained from the database.
+     * This method returns a list of classes to the controller, where all the classes are obtained from the database.
      * @return teachers:
-     *         the list of games obtained from the database
+     *         the list of classes obtained from the database associated with a teacher
      */
     public List<ClassEntity> getAllClassesForTeacher() {
         final String SELECT_CLASS_BY_TEACHER = "SELECT * FROM classEntity WHERE teacherUsername = ?";

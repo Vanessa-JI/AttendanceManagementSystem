@@ -94,7 +94,6 @@ public class Student implements UserDetails {
                 ", password='" + password + '\'' +
                 '}';
     }
-
     public void setAuthorities(List<GrantedAuthority> authorities) {
         this.authorities = authorities;
     }

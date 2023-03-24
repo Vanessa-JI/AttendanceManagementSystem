@@ -10,14 +10,12 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.util.List;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/attendance")
 public class HomeController {
-
     private AttendanceManagementService service;
     private StudentDetailsService studentService;
     private ClassDetailsService classService;
@@ -28,13 +26,6 @@ public class HomeController {
         this.studentService = studentService;
         this.classService = classService;
     }
-
-    /* @GetMapping is a composed annotation that acts as a shortcut
-    for @RequestMapping(method = RequestMethod.GET) */
-//    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
-//    public String displayHomePage() {
-//        return "home";
-//    }
 
     @GetMapping("/teachers")
     public ModelAndView displayteachers(Model model) {
@@ -75,7 +66,6 @@ public class HomeController {
 
         // Save the student data to the database using JdbcTemplate
         service.save(student);
-
         modelAndView.setViewName("studentSignupSuccess");
         return modelAndView;
     }
@@ -88,13 +78,6 @@ public class HomeController {
 //        model.addAttribute("student", new Student());
         return modelAndView;
     }
-
-//    @GetMapping("/studentHome")
-//    public ModelAndView backToStudentHome(Model model) {
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("studentHome");
-//        return modelAndView;
-//    }
 
     @GetMapping("/studentLogin")
     public ModelAndView showLoginForm() {
@@ -114,7 +97,6 @@ public class HomeController {
             return null;
 //            return modelAndView;
         }
-//        System.out.println(student.toString());
         studentService.loadUserByUsername(student.getUsername());
 //        modelAndView.setViewName("studentHome");
 //        return modelAndView;
@@ -141,21 +123,6 @@ public class HomeController {
         return modelAndView;
     }
 
-//    @GetMapping("/classStudent")
-//    public ModelAndView displayAttendanceSheet(@RequestParam("className") String className, Model model) {
-//        System.out.println("1!");
-//        List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
-//        System.out.println("2!");
-//        System.out.println(classStudent.toString());
-//        ModelAndView modelAndView = new ModelAndView();
-//        System.out.println("3!");
-//        modelAndView.addObject("classStudent", classStudent);
-//        System.out.println("4!");
-//        modelAndView.setViewName("classStudent");
-//        System.out.println("5!");
-//        return modelAndView;
-//    }
-
 @GetMapping("/classStudent")
 public ModelAndView displayAttendanceSheet(@RequestParam("className") String className) {
     List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
@@ -178,7 +145,6 @@ public ModelAndView displayAttendanceSheet(@RequestParam("className") String cla
             System.out.println("Updated!");
         }
 
-
         System.out.println("in the main post map");
         List<ClassStudent> classStudent = classService.getAttendanceByClass(className);
         System.out.println(classStudent.toString());
@@ -187,37 +153,5 @@ public ModelAndView displayAttendanceSheet(@RequestParam("className") String cla
         mav.setViewName("classStudent");
         return mav;
     }
-
-//    @GetMapping("/class-details")
-//    public String getClassDetails(@RequestParam("classId") int classId, Model model) {
-////        List<ClassStudent> students = service.getClassAttendance();
-//        model.addAttribute("students", students);
-//        return "class-details";
-//    }
-
-//    @PostMapping("/signup")
-//    public String processSignupForm(@ModelAttribute("student") Student student, BindingResult result) {
-//        if (result.hasErrors()) {
-//            return "studentSignup";
-//        }
-//
-//        // Save the student data to the database using JdbcTemplate
-//        service.save(student);
-//
-//        return "redirect:/studentSignupSuccess";
-//    }
-
-
-//    @GetMapping("/save")
-//    public String save(@ModelAttribute("student") Student student, BindingResult result) {
-//        System.out.println("calling controller");
-//        if (result.hasErrors()) {
-//            return "home";
-//        }
-//        service.save(student);
-//        return "redirect:/studentSignupSuccess.html";
-//    }
-
-
 }
 

@@ -14,10 +14,6 @@ public class StudentDAO {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-//    public StudentDAO(JdbcTemplate jdbcTemplate) {
-//        this.jdbcTemplate = jdbcTemplate;
-//    }
-
     public void save(Student student) {
         String password = student.getPassword();
         String encodedPassword = passwordEncoder.encode(password);

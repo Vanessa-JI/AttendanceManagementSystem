@@ -19,7 +19,6 @@ public class ClassStudentDAO {
 
     public List<ClassStudent> getAttendanceByClass(String className) {
         final String SELECT_ATTENDANCE_BY_CLASS = "SELECT * FROM classStudent WHERE className = ?";
-//        String className = "M1";
         List <ClassStudent> classStudents = jdbcTemplate.query(SELECT_ATTENDANCE_BY_CLASS, new ClassStudentRowMapper(), className);
         return classStudents;
     }
@@ -29,12 +28,5 @@ public class ClassStudentDAO {
         int id = classStudent.getRelationshipId();
         jdbcTemplate.update("UPDATE students SET attendance = ? WHERE id = ?", attendance, id);
     }
-
-//    public List<ClassStudent> getClassAttendance() {
-//        List<Student> students = jdbcTemplate.query(
-//                "SELECT * FROM students WHERE class_id = ? AND present = true", new Object[]{classId},
-//                new BeanPropertyRowMapper<>(Student.class));
-//
-//    }
 
 }

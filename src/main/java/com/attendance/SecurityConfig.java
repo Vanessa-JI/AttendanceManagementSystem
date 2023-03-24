@@ -29,6 +29,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(studentDetailsService).passwordEncoder(passwordEncoder());
     }
 
+    /**
+     * This method provides the security implementation for our username and password inputs.
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
@@ -37,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .anyRequest()
 //                .authenticated()
                 .antMatchers("/attendance/studentLogin", "/attendance/studentHome").hasRole("STUDENT")
-                .antMatchers("/", "/attendance/signup", "/attendance/studentLogin", "/css/", "/js/", "/fonts/**", "/attendance/teacherHome", "/attendance/classStudent", "/attendance/studentHome" ).permitAll()
+                .antMatchers("/", "/attendance/signup", "/attendance/studentLogin", "/css/", "/js/", "/fonts/**", "/attendance/teacherHome", "/attendance/classStudent", "/attendance/studentHome", "/attendance/home" ).permitAll()
                 .anyRequest().hasRole("STUDENT")
 //                .anyRequest().authenticated()
                 .and()
@@ -54,36 +59,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .permitAll();
-
-
-//        http
-//                .authorizeRequests().anyRequest().authenticated().antMatchers("/login").permitAll().and().formLogin() .loginPage("/login").defaultSuccessUrl("/", true).permitAll();
-//        http
-//                .authorizeRequests()
-////                .antMatchers("/admin").hasRole("ADMIN")
-////                .antMatchers("/", "/home").permitAll()
-//                .antMatchers("/css/", "/js/", "/fonts/**").permitAll()
-//                .anyRequest().hasRole("USER")
-//                .and()
-//                .formLogin()
-//                .loginPage("/login")
-//                .failureUrl("/login?login_error=1")
-//                .permitAll()
-//                .and()
-//                .logout()
-//                .logoutSuccessUrl("/")
-//                .permitAll();
-//        http
-//                .formLogin()
-//                .failureHandler((request, response, exception) -> {
-//                    if (exception instanceof LockedException) {
-//                        response.sendRedirect("/login?locked=true");
-//                    } else {
-//                        response.sendRedirect("/login?error=true");
-//                    }
-//                })
-//                .permitAll();
-//        return http.build();
     }
     }
 
