@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Class student html page displaying correctly for teacher view V12 23/3, 18:56pm">
+    <list default="true" id="62c0f019-3df1-4ba9-99cc-d557bc80b6f2" name="Changes" comment="Password validation works V13 23/3, 22:25pm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentJoinDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/dao/ClassStudentJoinDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/entity/ClassStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/attendance/service/ClassDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/classStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/classStudent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679597799945</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Password validation works V13 23/3, 22:25pm">
+      <created>1679610314482</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679610314482</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,7 +171,8 @@
     <MESSAGE value="Student and teacher home pages displaying database info V10 23/3, 00:32am" />
     <MESSAGE value="Student login page error fixed V11 23/3, 01:48am" />
     <MESSAGE value="Class student html page displaying correctly for teacher view V12 23/3, 18:56pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class student html page displaying correctly for teacher view V12 23/3, 18:56pm" />
+    <MESSAGE value="Password validation works V13 23/3, 22:25pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Password validation works V13 23/3, 22:25pm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
