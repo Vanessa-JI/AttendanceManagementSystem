@@ -58,6 +58,7 @@ public class Student implements UserDetails {
 
     @Override
     public String getUsername() {
+        System.out.println("the student username is: " + this.getStudentUsername());
         return this.getStudentUsername();
     }
 

@@ -40,4 +40,7 @@ public class ClassDetailsService {
     public void updateAttendance(ClassStudent classStudent) {
         classStudentDao.updateAttendance(classStudent);
     }
+//    public void updateAttendance(ClassStudent classStudent) {
+//        classStudentDao.updateAttendance(classStudent);
+//    }
 }

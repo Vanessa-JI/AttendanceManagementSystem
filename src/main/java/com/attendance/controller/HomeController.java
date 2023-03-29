@@ -83,7 +83,7 @@ public class HomeController {
     public ModelAndView showLoginForm() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("student", new Student());
-        modelAndView.setViewName("studentLogin.html");
+        modelAndView.setViewName("studentLogin");
 //        model.addAttribute("student", new Student());
         return modelAndView;
     }
@@ -97,10 +97,12 @@ public class HomeController {
             return null;
 //            return modelAndView;
         }
-        studentService.loadUserByUsername(student.getUsername());
-//        modelAndView.setViewName("studentHome");
+        System.out.println("ARE WE HERE????????");
+        String username = student.getUsername();
+        studentService.loadUserByUsername(username);
+        modelAndView.setViewName("studentHome");
 //        return modelAndView;
-        return null;
+        return modelAndView;
     }
 
     @GetMapping("/studentHome")
